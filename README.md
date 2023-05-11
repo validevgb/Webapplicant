@@ -1,2 +1,2 @@
 # Webapplicant
-Voluntary project in the subject internettechnologies at the university of applied sciences Kempten
+Freiwilliges Projekt im Fach Internettechnologien an der Hochschule Kempten
