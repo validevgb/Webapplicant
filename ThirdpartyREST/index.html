@@ -16,12 +16,13 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <title>New Site</title>
+    <script src="dogapi.js" defer></script>
+    <title>My Site</title>
   </head>
   <body id="start" class="bg-dark">
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">HS Kempten</a>
+        <a class="navbar-brand" href="#">Nice to meet you</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,17 +49,6 @@
               <a class="nav-link" href="#dogparks">Dogparks</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -154,28 +144,22 @@
     </div>
     <br />
     <h1 id="friends" class="myheader">Find out about my friends</h1>
+    <br/>
+    <button onclick="GetDogInformation()" class="button buttonblack">More friends</button><br />
     <div class="row">
       <div class="col-4">
-        <p class="text-white">Todo: insert external API Information here</p>
-        <img src="img/bild2.webp" class="myteam" />
+        <p class="text-white" id="info1">Click on the button to learn more about my friends!</p>
+        <img src="img/bild2.webp" class="myteam" id="img1"/>
       </div>
       <div class="col-4">
-        <p class="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, dolorum!
-          Expedita, repudiandae. Impedit modi ullam rem at ad aspernatur magnam
-          mollitia exercitationem. Impedit reprehenderit beatae quasi corporis
-          optio consectetur dolore.
+        <p class="text-white" id="info2">
         </p>
-        <img src="img/bild2.webp" class="myteam" />
+        <img src="img/bild2.webp" class="myteam" id="img2"/>
       </div>
       <div class="col-4">
-        <p class="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, dolorum!
-          Expedita, repudiandae. Impedit modi ullam rem at ad aspernatur magnam
-          mollitia exercitationem. Impedit reprehenderit beatae quasi corporis
-          optio consectetur dolore.
+        <p class="text-white" id="info3">
         </p>
-        <img src="img/bild2.webp" class="myteam" />
+        <img src="img/bild2.webp" class="myteam" id="img3"/>
       </div>
     </div>
     <br />
