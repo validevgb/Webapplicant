@@ -1,0 +1,46 @@
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.buttonblack {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.buttonblack:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.myheader {
+  color: aquamarine;
+}
+
+.myteam {
+  width: 250px;
+  height: 250px;
+  border-radius: 25%;
+  object-fit: cover;
+}
+
+.profilepic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cvpics {
+  height: 200px;
+}
