@@ -12,38 +12,21 @@ async function GetDogInformation() {
     console.log(error);
   }
 
-  let rand1 = Math.floor(Math.random() * 100);
-  let rand2 = Math.floor(Math.random() * 100);
-  let rand3 = Math.floor(Math.random() * 100);
-  document.getElementById("img1").src = data[rand1].image.url;
-  document.getElementById("img2").src = data[rand2].image.url;
-  document.getElementById("img3").src = data[rand3].image.url;
-
-  document.getElementById("info1").innerHTML =
-    data[rand1].name +
+  for (var i = 1; i <= 3; i++) {
+    let random = Math.floor(Math.random() * 100);
+    document.getElementById("img" + i).src = data[random].image.url;
+    document.getElementById("info" + i).innerHTML = GetInfoInnerhtml(random);
+  }
+}
+function GetInfoInnerhtml(rand) {
+  return (
+    data[rand].name +
     "<ul><li>" +
-    data[rand1].bred_for +
+    data[rand].bred_for +
     "</li><li>" +
-    data[rand1].life_span +
+    data[rand].life_span +
     "</li><li>" +
-    data[rand1].temperament +
-    "</li></ul>";
-  document.getElementById("info2").innerHTML =
-    data[rand2].name +
-    "<ul><li>" +
-    data[rand2].bred_for +
-    "</li><li>" +
-    data[rand2].life_span +
-    "</li><li>" +
-    data[rand2].temperament +
-    "</li></ul>";
-  document.getElementById("info3").innerHTML =
-    data[rand3].name +
-    "<ul><li>" +
-    data[rand3].bred_for +
-    "</li><li>" +
-    data[rand3].life_span +
-    "</li><li>" +
-    data[rand3].temperament +
-    "</li></ul>";
+    data[rand].temperament +
+    "</li></ul>"
+  );
 }
