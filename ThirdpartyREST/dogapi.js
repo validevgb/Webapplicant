@@ -1,8 +1,5 @@
 let apiURL =
   "https://api.thedogapi.com/v1/breeds?limit=3%27%20%20--header%20%27Content-Type:%20application/json";
-let apikey =
-  "live_tTCIiyQhNfAlBGzh4PpC8dkerl3htJyYMsq3OlokBoJdFfwR59tVsmwBBhsGAk1b";
-
 async function GetDogInformation() {
   try {
     const response = await fetch(apiURL);
@@ -29,4 +26,27 @@ function GetInfoInnerhtml(rand) {
     data[rand].temperament +
     "</li></ul>"
   );
+}
+async function getDogFacts() {
+  try {
+    const response = await fetch("http://localhost:3000/api/dog/");
+    const result = await response.json();
+    console.log(result);
+
+    document.getElementById("nameinfo").innerHTML =
+      "My name is " + result.data[0].vorname + " " + result.data[0].nachname;
+    document.getElementById("dbinfo").innerHTML =
+      "<ul><li>" +
+      result.data[0].strasse +
+      " " +
+      result.data[0].hausnummer +
+      " ;PLZ " +
+      result.data[0].plz +
+      "</li><li>" +
+      result.data[0].ort +
+      "</li></ul><br/>" +
+      result.message;
+  } catch (e) {
+    console.log("Fehler" + e);
+  }
 }
